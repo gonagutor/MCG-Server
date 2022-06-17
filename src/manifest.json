@@ -1,0 +1,50 @@
+{
+  "version": "9ce101b00645b158980a074dde74542606ac429aba53eefb370652afe916f05a",
+  "assets": [
+    {
+      "name": "planter",
+      "material": {
+        "hash": "7bec77c0d569b2d66aa2b99d6395f8bc",
+        "file": "objects/planter/planter.mtl"
+      },
+      "model": {
+        "hash": "536b085e44083d5dbccf317ec4bd760b",
+        "file": "objects/planter/planter.obj"
+      },
+      "texture": {
+        "hash": "c175ac0fbf402375281607195dd7a7d3",
+        "file": "objects/planter/planter.png"
+      }
+    },
+    {
+      "name": "vending_machine",
+      "material": {
+        "hash": "87adab0498e14afeb76d548b39bb3605",
+        "file": "objects/vending_machine/vending_machine.mtl"
+      },
+      "model": {
+        "hash": "5507032258e12ef537cdf7650a169ebf",
+        "file": "objects/vending_machine/vending_machine.obj"
+      },
+      "texture": {
+        "hash": "e039075868416dc13b8754fb8e219ed4",
+        "file": "objects/vending_machine/vending_machine.png"
+      }
+    },
+    {
+      "name": "vending_machine_blue",
+      "material": {
+        "hash": "87adab0498e14afeb76d548b39bb3605",
+        "file": "objects/vending_machine_blue/vending_machine_blue.mtl"
+      },
+      "model": {
+        "hash": "e6419a2956ed808426be24e3233201f3",
+        "file": "objects/vending_machine_blue/vending_machine_blue.obj"
+      },
+      "texture": {
+        "hash": "8769f4d6cabf9593ab29c4f9e0b82e00",
+        "file": "objects/vending_machine_blue/vending_machine.png"
+      }
+    }
+  ]
+}

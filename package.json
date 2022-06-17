@@ -1,0 +1,17 @@
+{
+  "name": "mcg-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "manifest": "node index.js",
+    "start": "serve ./src"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cli-color": "^2.0.2",
+    "crypto": "^1.0.1",
+    "serve": "^13.0.2"
+  }
+}
