@@ -37,7 +37,7 @@ const main = () => {
 
   fs.readdirSync('./src/objects').forEach(file => {
     const dirHashes = {
-      name: file,
+      name: file.split('.')[0],
       hash: hashFile(`./src/objects/${file}`),
       file: `objects/${file}`,
     };
@@ -54,6 +54,7 @@ const main = () => {
     if (err) throw err;
     fs.writeFile('./src/version', newManifest.version, (err) => {
       if (err) throw err;
+      console.log('');
       console.log(clc.green('Manifest updated! New version:'), clc.blue(newManifest.version));
     });
   });

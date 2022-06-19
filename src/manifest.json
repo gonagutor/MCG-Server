@@ -2,17 +2,17 @@
   "version": "14acc46fbf1f2e0f5c8562127fee1a9625092e9c75de152f87b46bbf12741d28",
   "assets": [
     {
-      "name": "planter.gltf",
+      "name": "planter",
       "hash": "82043d457c588087e17407e46a074540",
       "file": "objects/planter.gltf"
     },
     {
-      "name": "vending_machine.gltf",
+      "name": "vending_machine",
       "hash": "8deaf5232f5b283345b191a947095e3b",
       "file": "objects/vending_machine.gltf"
     },
     {
-      "name": "vending_machine_blue.gltf",
+      "name": "vending_machine_blue",
       "hash": "f86997a5860d46e4e0c3b1d5c0cae5a6",
       "file": "objects/vending_machine_blue.gltf"
     }
