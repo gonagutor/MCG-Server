@@ -35,48 +35,14 @@ function computeVersionHash(folder, inputHash = null) {
 const main = () => {
   const assets = [];
 
-  fs.readdirSync('./src/objects').forEach(folder => {
+  fs.readdirSync('./src/objects').forEach(file => {
     const dirHashes = {
-      name: folder,
-      material: {
-        hash: null,
-        file: null
-      },
-      model: {
-        hash: null,
-        file: null
-      },
-      texture: {
-        hash: null,
-        file: null
-      }
+      name: file,
+      hash: hashFile(`./src/objects/${file}`),
+      file: `objects/${file}`,
     };
-    console.log(clc.green(`Hashing folder: ${clc.blue(folder)}`));
-    fs.readdirSync(`./src/objects/${folder}`).forEach(file => {
-      const ext = file.split('.').pop();
-      switch (ext) {
-        case 'mtl':
-          dirHashes.material.file = `objects/${folder}/${file}`;
-          dirHashes.material.hash = hashFile(`./src/${dirHashes.material.file}`);
-          console.log(clc.blue(`\t${dirHashes.material.file} ${clc.white(dirHashes.material.hash)}`), process.argv[2] || clc.magenta('Using folder hash as version'));
-          break
-        case 'obj':
-          dirHashes.model.file = `objects/${folder}/${file}`;
-          dirHashes.model.hash = hashFile(`./src/${dirHashes.model.file}`);
-          console.log(clc.blue(`\t${dirHashes.model.file} ${clc.white(dirHashes.model.hash)}`), process.argv[2] || clc.magenta('Using folder hash as version'));
-          break
-        case 'png':
-          dirHashes.texture.file = `objects/${folder}/${file}`;
-          dirHashes.texture.hash = hashFile(`./src/${dirHashes.texture.file}`);
-          console.log(clc.blue(`\t${dirHashes.texture.file} ${clc.white(dirHashes.texture.hash)}`), process.argv[2] || clc.magenta('Using folder hash as version'));
-          break;
-        default:
-          break;
-      }
-    });
-
+    console.log(clc.blue(`${dirHashes.file} ${clc.white(dirHashes.hash)}`), process.argv[2] || clc.magenta('Using folder hash as version'));
     assets.push(dirHashes);
-    console.log('');
   });
 
   const newManifest = {
